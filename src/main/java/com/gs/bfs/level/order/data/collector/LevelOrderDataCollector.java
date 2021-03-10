@@ -1,12 +1,12 @@
-package com.gs.bfs.two.dimensional.array;
+package com.gs.bfs.level.order.data.collector;
 
 import java.util.*;
 /**
  * 
  * @author Gopal Selvaraj
- * Level order zig zag data collection
+ * Level order left to right data collection
  */
-public class LevelOrderZigzagDataCollector {
+public class LevelOrderDataCollector {
 
   private boolean[][] visited;
   
@@ -17,23 +17,18 @@ public class LevelOrderZigzagDataCollector {
     queue.offer(new int[] {0, 0});
     visited[0][0] = true;
     List<List<Integer>> result = new ArrayList<List<Integer>>();
-    boolean zigzag = true;
+
     while (!queue.isEmpty()) {
         int currentLevelSize = queue.size();
-        LinkedList<Integer> levelList = new LinkedList<Integer>();
+        List<Integer> levelList = new ArrayList<Integer>();
         for(int index = 0; index < currentLevelSize; index++) {
           int[] current = queue.poll();
           int row = current[0];
           int col = current[1];
-          if(zigzag) {
-            levelList.addFirst(grid[row][col]);
-          }else {
-            levelList.addLast(grid[row][col]);
-          }
+          levelList.add(grid[row][col]);
           addNeighboursToQueue(queue, grid, row, col);
         }
         result.add(levelList);
-        zigzag = !zigzag;
     }
 
     return result;

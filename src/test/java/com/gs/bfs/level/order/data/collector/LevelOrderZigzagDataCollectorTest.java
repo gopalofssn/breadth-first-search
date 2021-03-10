@@ -1,14 +1,15 @@
-package com.gs.bfs.two.dimensional.array;
+package com.gs.bfs.level.order.data.collector;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.junit.jupiter.api.Test;
+import com.gs.bfs.level.order.data.collector.LevelOrderZigzagDataCollector;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class LevelOrderDataCollectorTest {
+public class LevelOrderZigzagDataCollectorTest {
 
-  private LevelOrderDataCollector levelOrderDataCollector  = new LevelOrderDataCollector();
+  private LevelOrderZigzagDataCollector levelOrderZigzagDataCollector  = new LevelOrderZigzagDataCollector();
   
   @Test
   public void testCase1() {
@@ -18,15 +19,15 @@ public class LevelOrderDataCollectorTest {
                       {9,  10, 11, 12},
                       {13, 14, 15, 16}
                      };
-    List<List<Integer>> actual = levelOrderDataCollector.collect(input);
+    List<List<Integer>> actual = levelOrderZigzagDataCollector.collect(input);
     
     @SuppressWarnings("serial")
     List<List<Integer>> expected = new ArrayList<List<Integer>>() {{
                                       add(new ArrayList<Integer>(Arrays.asList(1)));
                                       add(new ArrayList<Integer>(Arrays.asList(5, 2)));
-                                      add(new ArrayList<Integer>(Arrays.asList(9, 6, 3)));
+                                      add(new ArrayList<Integer>(Arrays.asList(3, 6, 9)));
                                       add(new ArrayList<Integer>(Arrays.asList(13, 10, 7, 4)));
-                                      add(new ArrayList<Integer>(Arrays.asList(14, 11, 8)));
+                                      add(new ArrayList<Integer>(Arrays.asList(8, 11, 14)));
                                       add(new ArrayList<Integer>(Arrays.asList(15, 12)));
                                       add(new ArrayList<Integer>(Arrays.asList(16)));
                                     }};
