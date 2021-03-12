@@ -1,4 +1,4 @@
-package com.gs.bfs.two.dimensional.array;
+package com.gs.bfs.rotten.orange;
 
 import java.util.Arrays;
 import java.util.HashSet;

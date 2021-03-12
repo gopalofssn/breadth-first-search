@@ -1,6 +1,7 @@
-package com.gs.bfs.two.dimensional.array;
+package com.gs.bfs.rotten.orange;
 
 import org.junit.jupiter.api.Test;
+import com.gs.bfs.rotten.orange.RottenOranges;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RottenOrangesTest {
