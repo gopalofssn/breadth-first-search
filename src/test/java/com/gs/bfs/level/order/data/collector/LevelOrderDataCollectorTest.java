@@ -1,11 +1,11 @@
 package com.gs.bfs.level.order.data.collector;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.junit.jupiter.api.Test;
-import com.gs.bfs.level.order.data.collector.LevelOrderDataCollector;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class LevelOrderDataCollectorTest {
 
